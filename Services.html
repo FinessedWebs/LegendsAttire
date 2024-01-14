@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Legends Attire Services</title>
+</head>
+<style>
+html,body
+    {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+    }
+.graduate 
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0;
+        padding: 0;
+    }
+.graduate img
+    {
+    width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+    }
+.space
+    {
+        width: 2%;
+    }
+.bottom-space
+    {
+        height: 50px;
+    }
+
+footer
+    {
+        padding: 0.5em 0;
+        height: 130px;
+        justify-content: center;
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+    }
+.social-icon
+    {
+        width: 110px;
+        color: darkgray;
+        padding: 5px;
+        text-decoration: none;
+    }
+.social-icon:hover
+    {
+        color: black;
+    }
+.column1, .column2, .column3
+    {
+        color: darkgray;
+    }
+li
+    {
+        color: darkgray;
+        text-decoration: none;
+        align-items: center;
+    }
+    nav
+    {
+        margin: 27px auto 0;
+        position: relative;
+        width: 590px;
+        height: 50px;
+        background-color: #fdfdfd;
+        border-radius: 8px;
+        font-size:0 ;
+    }
+    nav a{
+        line-height: 50px;
+        height: 100%;
+        font-size: 15px;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        color: #34495e;
+        cursor: pointer;
+    }
+    div.animation{
+        position: absolute;
+        height: 100%;
+        top: 0;
+        z-index: 0;
+        transition: all .5s ease 0s;
+        border-radius: 8px;
+    }
+    a:nth-child(1){
+            width: 100px
+    }
+    a:nth-child(2){
+            width: 110px; 
+    }
+    a:nth-child(3){
+            width:100px
+    }
+    a:nth-child(4){
+            width:160px;
+    }
+    a:nth-child(5){
+            width:120px
+    }
+    nav.start-home, a:nth-child(1):hover~.animation{
+            width: 100px;
+            left: 0;
+            background-color: #1abc9c;
+    }
+    nav.start-about, a:nth-child(2):hover~.animation{
+            width: 110px;
+            left:100px;
+            background-color: #e74c3c;
+    }
+    nav.start-blog, a:nth-child(3):hover~.animation{
+            width: 100px;
+            left:210px;
+            background-color: #3498db;
+    }
+    nav.start-portefolio, a:nth-child(4):hover~.animation{
+            width: 160px;
+            left:310px;
+            background-color: #9b59b6;
+    }
+    nav.start-contact, a:nth-child(5):hover~.animation{
+            width: 120px;
+            left:470px;
+            background-color: #e67e22;
+    }
+    span{
+            color: #2BD6B4;
+    }
+    .Article1{
+        padding-left: 10%;
+      padding-right: 10%;
+      font-size: 25px;
+      font-style:Arial ;
+      font-family: 'Encode Sans Condensed', sans-serif;
+      line-height: 1.5;
+    }
+    .Welcome{
+  font-family: 'Encode Sans Condensed', sans-serif;
+}
+hr{
+  
+  width: 600px;
+  background-color: #154c79;
+  color: #154c79;
+  height: 2px;
+ 
+}
+.form{
+  background-color: lightgray;
+  padding-bottom: 25px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 24rem;
+    
+    
+
+}
+input,
+select,
+textarea{
+    padding: 1.4rem;
+    background: transparent;
+    border: 1px solid black;
+    margin-left: 40px;
+    border-radius: 8px;
+    background-color: white;
+
+}
+textarea{
+    height: 6rem;
+    transition: none; 
+}
+button{
+    width: 8rem;
+    padding: 1.4rem;
+    cursor: pointer;
+    background: navy;
+    color: white;
+}
+form input, select{
+  width: 170px;
+ 
+}
+.submit{ 
+  background-color: skyblue;
+  color: white;
+}
+
+   
+    
+    
+    
+    .active {
+      background-color: #717171;
+    }
+   
+    .aa{
+       padding-left:30% ;
+       padding-right: 30%;
+    }
+    .lable{
+        padding-left: px;
+    }
+
+    @media (max-width: 915px) {
+        footer{
+            padding-right: 80px;
+            justify-content: center;
+        }
+        hr{
+  
+  width: 200px;
+  background-color: #154c79;
+  color: #154c79;
+  height: 1px;
+ 
+}
+        .Article1{
+        padding-left: 10%;
+      padding-right: 10%;
+      font-size: 15px;
+      font-style:Arial ;
+      font-family: 'Encode Sans Condensed', sans-serif;
+      line-height: 1.5;
+    }
+        nav
+    {
+        width: auto;
+        height: 50px;
+    }
+    a:nth-child(1){
+            width: 65px
+    }
+    a:nth-child(2){
+            width: 73px; 
+    }
+    a:nth-child(3){
+            width:77px
+    }
+    a:nth-child(4){
+            width:90px;
+    }
+    a:nth-child(5){
+            width:80px
+    }
+    nav.start-home, a:nth-child(1):hover~.animation{
+            width: 60px;
+            left: 60px;
+            background-color: #1abc9c;
+    }
+    nav.start-about, a:nth-child(2):hover~.animation{
+            width: 80px;
+            left:119px;
+            background-color: #e74c3c;
+    }
+    nav.start-blog, a:nth-child(3):hover~.animation{
+            width: 80px;
+            left:193px;
+            background-color: #3498db;
+    }
+    nav.start-portefolio, a:nth-child(4):hover~.animation{
+            width: 90px;
+            left:273px;
+            background-color: #9b59b6;
+    }
+    nav.start-contact, a:nth-child(5):hover~.animation{
+            width: 85px;
+            left:360px;
+            background-color: #e67e22;
+    }
+    span{
+            color: #2BD6B4;
+    }
+    }
+   
+</style>
+<body>
+<header>
+    
+    <h1 >Legends Attire</h1>
+
+    <div>
+        <nav><a href="index.html"><u>Home</u></a>
+        <a href="#content"><u>About</u></a>
+         <a href="#Services"><u>Services</u></a>
+        <a href="#contact"><u>Contact</u></a>
+        <a href="Gallery.html"><u>Gallery</u></a>
+        <div class="animation start-home"></div>
+        </nav>
+    </div>
+
+</header>
+
+<div class="bottom-space"></div>
+
+<div>
+
+         <div><img src="images/gradautes.jpg" alt="graduate" class="graduate"></div>
+
+    <div id="content" class="Article1">
+        <h2 class="Welcome">Welcome to Legends Attire</h2>
+        <hr>
+        <p>
+            Celebrate your academic achievement in style with our premium graduation gowns! 
+            Made from high-quality materials, our gowns are designed to provide you with maximum comfort and style on your big day. 
+            Our graduation gowns are available in a wide range of sizes and colors to ensure that every graduate can find the perfect fit. 
+            Whether you're graduating from high school, college, or university, we've got the right gown for you.<br>
+        </p>
+     
+        <p>
+            Our gowns are made from durable and breathable fabrics that will keep 
+            you comfortable throughout the ceremony. They feature a classic design with a traditional look that 
+            will make you stand out from the crowd.
+            We offer a range of customization options to help you personalize your gown and make it truly yours. 
+            We have everything you need to make your graduation gown one-of-a-kind.
+            <br><br>In addition to our high-quality graduation gowns and accessories
+            , we also offer graduation hoods for all tertiary institutions in South 
+            Africa. We understand that wearing the right hood is an important part 
+            of your graduation ceremony, and we're proud to offer a wide range of 
+            options to fit your needs.
+        </p>
+        <p>
+            Our gowns are not only stylish but also affordable. We understand the importance of your graduation day, and we 
+            don't want the cost of a gown to be a barrier to your celebrations. That's why we offer competitive prices on all our 
+            gowns. Ordering your graduation gown is easy and hassle-free. Simply choose your size and color, 
+            select any customization options you want, and place your order. We'll take care of the rest, ensuring your gown is 
+            delivered to you in plenty of time for your graduation ceremony.
+            So, if you want to celebrate your academic achievements in style, order your graduation gown from us today! With our 
+            premium quality and affordable prices, you won't find a better deal anywhere else.
+        </p>
+        
+        <hr>
+
+          <h2 class="Welcome" id="Services">Services</h2>
+          <h3>Academic Attire and Church Attire:</h3>
+
+        <p>
+            Looking for the perfect academic or church attire for your special day? 
+            Look no further! Our selection of academic attire includes everything you need for your graduation ceremony, 
+            from caps and gowns to hoods and stoles. We offer a wide variety of colors and styles to choose from, 
+            ensuring that you can find the perfect look to match your personal style. Our church attire options include choir robes, 
+            cassocks, surplices, and other vestments, designed to help you look and feel your best during religious ceremonies. 
+            Whether you're graduating or attending a church ceremony, we everything you need to look your part.
+        </p>
+
+            <h3>Legal Attire:</h3>
+
+        <p>
+            Legal professionals need to look their best in a courtroom setting. 
+            That's why we offer a wide variety of legal attire options. 
+            Our selection includes everything from court attire to lawyer's robes, 
+            designed to help you present yourself in a professional and polished manner. 
+            Our legal attire options come in a range of sizes and colors to match your personal style and preferences. 
+            If you're a legal professional looking for the perfect attire.
+        </p>
+
+            <h3>Alteration and Tailoring:</h3>
+
+        <p>
+            Finding the perfect fit for your clothing can be challenging. 
+            That's why we offer alteration and tailoring services. 
+            Our expert team can provide repairs, resizing, and adjustments to help you get the perfect fit for any garment. 
+            Whether you need a hemline shortened, a sleeve lengthened, or any other alteration, we have you covered. 
+            Our team is dedicated to ensuring that you look and feel your best in any garment, 
+            and we're committed to providing high-quality alteration and tailoring services that exceed your expectations.
+        </p>
+
+            <h3>Clerical:</h3>
+
+        <p>
+            For religious leaders, finding the perfect attire can be a challenge. 
+            That's why we offer a wide selection of clerical attire. 
+            Our selection includes everything from robes to stoles, designed to help you look and feel your best during religious
+            ceremonies. We have a range of sizes and colors to match your preferences, 
+            ensuring that you can find the perfect look for your specific needs. Whether you're a priest, pastor, 
+            or other religious leader, our website has everything you need to look your best during religious services.
+        </p>
+
+            <h3>Elementary School and More:</h3>
+
+        <p >
+            Graduating from elementary school is a special occasion, and we have everything you need to make your child's graduation day unforgettable. 
+            Our selection of gowns is designed to help your child look their best on their big day. 
+            We offer a range of sizes and colors to match your child's preferences, 
+            ensuring that they can find the perfect look to match their personality. Additionally, 
+            we offer a wide variety of gowns for other school events such as proms and homecomings. 
+            No matter what your child's attire needs are, our website has you covered.<br><hr>
+          
+        </p>
+        <br><br>    
+    </div>
+</div>
+
+<div class="container">
+
+   
+   
+    
+   
+  
+
+    <div class="bottom-space"></div>
+    <a class="morebtn" href="Gallery.html"><u>More Products</u></a>
+  
+    <div class="gallery-wrap">
+      <div class="item item-1"></div>
+      <div class="item item-2"></div>
+      <div class="item item-3"></div>
+      <div class="item item-4"></div>
+      <div class="item item-5"></div>
+    </div>
+</div>
+
+<div class="social"></div>
+
+<div class="bottom-space"></div>
+
+<div class="form">
+    <br>
+    <h2 class="Welcome" id="order">Order Now</h2>
+    <hr>
+
+    <form action="https://formspree.io/f/mdovpgnv" method="post">
+        
+        <select name="Order Type" required>
+
+            <option disabled selected value="I want to:">
+                I want to:
+            </option>
+            <option>
+                Hire
+            </option>
+            <option>
+                Purchace
+            </option>
+
+        </select>
+        
+        <br>
+
+        <input type="text" name="Gown Size" placeholder="Enter Gown Size (Your height)" required><br>
+        <input type="text" name="Institution" placeholder="Your Institution" required><br>
+        <input type="text" name="Name" placeholder="Full Name" required><br>
+        <input type="email" name="Email" placeholder="Email" required><br>
+        <input type="tel" name="Telephone" placeholder="Tel" required><br>
+        <select name="province">
+            <option>Gauteng</option>
+            <option>Western Cape</option>
+            <option>Eastern Cape</option>
+            <option>Northen Cape</option>
+            <option>North West</option>
+            <option>Limpopo</option>
+            <option>Kwazulu-Natal</option>
+            <option>Free State</option>
+            <option>Mpumalanga</option>
+        </select><br>
+
+        <textarea name="Message" placeholder="Message"></textarea><br>
+        <input class="submit" type="submit" value="Submit">
+
+    </form>
+
+    <div class="space"></div>
+
+    <br>
+
+    <h2 class="Welcome">Contact Us</h2>
+    <hr>
+    <form action="https://formspree.io/f/mdovpgnv" method="post">
+            <h2></h2>
+        <input type="text" name="Name" placeholder="Full Name" required><br>
+        <input type="email" name="Email" placeholder="Email" required><br>
+        <input type="tel" name="Telephone" placeholder="Tel" required><br>
+        <select name="province">
+            <option>Gauteng</option>
+            <option>Western Cape</option>
+            <option>Eastern Cape</option>
+            <option>Northen Cape</option>
+            <option>North West</option>
+            <option>Limpopo</option>
+            <option>Kwazulu-Natal</option>
+            <option>Free State</option>
+            <option>Mpumalanga</option>
+        </select><br>
+        <textarea name="Message" placeholder="Message"></textarea><br>
+        <input class="submit" type="submit" value="Submit">
+    </form>
+    <div class="space"></div>
+</div>
+
+<div class="space"></div>
+
+<div class="column" >
+    <div class="Article column1">
+
+        <p id="contact">
+            <b><u><i>Contact:</i></u></b><br>
+            Lucia: +27 82 859 0188<br>
+            Mike: +27 67 112 2347<br>
+            Jenny: +27 83 620 6436                       
+        </p>
+
+        <br>
+
+        <p id="Email">
+            <b><u><i>Email:</i></u></b><br>
+            legendsattire@gmail.com
+        </p> 
+    </div>
+
+    <div class="space"></div>
+
+    <div class="Article column2">
+
+        <p id="Socials">
+            <b><u><i>Socials:</i></u></b><br>
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            
+            <a class="social-icon" href="https://instagram.com/"  target="_blank">Instagram <ion-icon name="logo-instagram"></ion-icon></a><br>
+            <a class="social-icon" href="https://twitter.com/"  target="_blank">Twitter<ion-icon name="logo-twitter"></ion-icon></a><br>
+            <a class="social-icon" href="https://facebook.com/"  target="_blank">Facebook<ion-icon name="logo-facebook"></ion-icon></a><br>
+            <a class="social-icon" href="https://tiktok.com/"  target="_blank">Tik Tok<ion-icon name="logo-tiktok"></ion-icon></a>
+        </p>
+
+    </div>
+
+    <div class="space"></div>
+
+    <div class="Article column3">
+        <p>
+            <b><u><i>Banking Details:</i></u></b><br>
+            Bank:<br>
+            <b><u><i>Documents:</i></u></b><br>
+           Requirements: <a href="images/FinessedWebs Website Requirements.pdf" class="doc" download="Payment " target="_blank" title="Payment"></a><br>
+           Fees: <a href="images/Payment.pdf" class="doc" download="pdf" target="_blank"></a>
+        </p>
+    </div>
+
+</div>
+<div class="bottom-space"></div>
+<footer>
+    <p>&#169 Legends Attire Graduation Regalai &#183 Tel: +27 76 667 9185 &#183 View our Social Media and don&#8217t forget to follow and like.
+    </p>
+    <p>Designed by FinessedWebs</p>
+  </footer>
+</body>
+</html>

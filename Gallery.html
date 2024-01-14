@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+   <style>
+    *{
+            scroll-behavior:smooth;
+        }
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 20px;
+                background: lavender;
+            }
+    
+            .container img {
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+                margin: 10px;
+                cursor: pointer;
+                transition: transform .2s ease-in-out;
+                border-radius: 9px;
+            }
+    
+            .container img:hover {
+                transform: scale(1.1);
+            }
+    
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding: 20px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+    
+            .modal-content {
+                margin: auto;
+                display: block;
+                max-width: 700px;
+                max-height: 700px;
+                overflow: hidden;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+    
+            @keyframes zoom {
+                from {transform: scale(0)}
+                to {transform: scale(1)}
+            }
+    
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+    
+            .close:hover,
+            .close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            .Backbtn{
+      display: inline-block;
+		padding: 12px 24px;
+		border-radius: 4px;
+		background-color: #007bff;
+		color: #fff;
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: bold;
+		box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+		transition: background-color 0.2s ease-in-out;
+    }
+    .Backbtn:hover {
+		background-color: #0062cc;
+	}
+        </style>
+    </head>
+    <body>
+        <a class="Backbtn" href="Services.html"><u>Back</u></a>
+        <div class="container">
+            <img src="images/30e8cd5965ee0a19999367e91e103af8.jpg" alt="Image 1" onclick="openModal('images/30e8cd5965ee0a19999367e91e103af8.jpg')">
+            <img src="images/7af692f56c6742ac04741c3dfcb99490.jpg" alt="Image 2" onclick="openModal('images/7af692f56c6742ac04741c3dfcb99490.jpg')">
+            <img src="images/fb334acaa0715209f07a555b7e865aaa.jpg" alt="Image 3" onclick="openModal('images/7af692f56c6742ac04741c3dfcb99490.jpg')">
+            <img src="4.png" alt="Image 4" onclick="openModal('4.png')">
+            <img src="5.png" alt="Image 5" onclick="openModal('5.png')">
+            <img src="6.png" alt="Image 6" onclick="openModal('6.png')">
+            <img src="7.png" alt="Image 7" onclick="openModal('7.png')">
+            <img src="8.png" alt="Image 8" onclick="openModal('8.png')">
+            <img src="9.png" alt="Image 9" onclick="openModal('9.png')">
+            <img src="10.png" alt="Image 10" onclick="openModal('10.png')">
+            <img src="11.png" alt="Image 11" onclick="openModal('11.png')">
+            <img src="12.png" alt="Image 12" onclick="openModal('12.png')">
+            <img src="13.png" alt="Image 13" onclick="openModal('13.png')">
+            <img src="14.png" alt="Image 14" onclick="openModal('14.png')">
+            <img src="15.png" alt="Image 15" onclick="openModal('15.png')">
+            <img src="16.png" alt="Image 16" onclick="openModal('16.png')">
+            
+            <img src="18.png" alt="Image 18" onclick="openModal('18.png')">
+            <img src="19.png" alt="Image 19" onclick="openModal('19.png')">
+            <img src="20.png" alt="Image 20" onclick="openModal('20.png')">
+            <img src="21.png" alt="Image 21" onclick="openModal('21.png')">
+            <img src="22.png" alt="Image 22" onclick="openModal('22.png')">
+            <img src="23.png" alt="Image 23" onclick="openModal('23.png')">
+            <img src="24.png" alt="Image 24" onclick="openModal('24.png')">
+            <img src="25.png" alt="Image 25" onclick="openModal('25.png')">
+            <img src="26.png" alt="Image 26" onclick="openModal('26.png')">
+            <img src="27.png" alt="Image 27" onclick="openModal('27.png')">
+            <img src="28.jpg" alt="Image 28" onclick="openModal('28.jpg')">
+            <img src="29.jpg" alt="Image 29" onclick="openModal('29.jpg')">
+            <img src="30.jpg" alt="Image 30" onclick="openModal('30.jpg')">
+            <img src="31.jpg" alt="Image 31" onclick="openModal('31.jpg')">
+            <img src="32.jpg" alt="Image 32" onclick="openModal('32.jpg')">
+            <img src="33.jpg" alt="Image 33" onclick="openModal('33.jpg')">
+
+            
+        </div>
+    
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="img01">
+        </div>
+    
+        <script>
+            function openModal(image) {
+                var modal = document.getElementById("myModal");
+                var img = document.getElementById(image);
+                var modalImg = document.getElementById("img01");
+                modal.style.display = "block";
+                modalImg.src = image;
+            }
+    
+            function closeModal() {
+                var modal = document.getElementById("myModal");
+                modal.style.display = "none";
+            }
+        </script>
+    </body>
+    </html>
+    
