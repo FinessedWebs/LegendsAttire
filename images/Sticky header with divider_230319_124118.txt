@@ -1,0 +1,90 @@
+Sticky header with divider.
+
+Html and css code for a header that has a navigation bar that is stationary when you scroll, the div has to be divided at the middle by a line that comes for the top and goes to the bottom at a 80° angle. There is 60% space on the left hand side and 40% space on the right hand side and the right hand side is for video
+
+Here's an example HTML and CSS code for a header with a stationary navigation bar and a dividing line:
+
+HTML:
+
+phpCopy code
+
+<header>
+
+ <div class="navbar">
+ <ul> 
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li> 
+<li><a href="#">Contact</a></li> 
+</ul> 
+</div>
+ 
+<div class="divider"></div> 
+
+<div class="video-container"> 
+<video src="your-video-url" controls></video> 
+</div> 
+
+</header> 
+
+CSS:
+
+css code
+
+header { 
+position: fixed; 
+top: 0; 
+left: 0; 
+width: 100%; 
+background-color: #fff; 
+z-index: 100; 
+} 
+.navbar { 
+display: flex; 
+justify-content: space-between; 
+align-items: center; 
+height: 60px; 
+width: 100%; 
+max-width: 1200px; 
+margin: 0 auto; 
+padding: 0 20px; 
+} 
+.navbar ul { 
+display: flex; 
+list-style: none; 
+margin: 0; padding: 0; 
+} 
+.navbar li { 
+margin-right: 20px; 
+} 
+.navbar a { 
+text-decoration: none; 
+color: #333; 
+font-weight: bold; 
+} 
+.divider { 
+position: absolute; 
+top: 0; 
+left: 60%; 
+width: 0; 
+height: 100%; 
+border-right: 2px solid #ccc; 
+transform: skew(-20deg); 
+transform-origin: top; 
+} 
+.video-container { 
+width: 40%; 
+height: 0; 
+padding-bottom: 56.25%; 
+position: relative; 
+} 
+.video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; } 
+
+Explanation:
+
+• The header element is set to position: fixed to make it stationary when scrolling.
+
+• The navbar div is a flex container with a height of 60px and a width of 100% with a maximum width of 1200px and centered using margin: 0 auto.
+
+• The divider div is positioned absolutely at the top and left of the header with a width of 0 and a height of 100%. It has a right border of 2px solid #ccc and is skewed at a -20deg angle using transform: skew(-20deg) to achieve the 80-degree angle effect. The transform-origin property is set to top to make the skewing start from the top.
+
+• The video-container div is set to a width of 40% and a padding-bottom of 56.25% to maintain a 16:9 aspect ratio for the video. It's positioned relatively inside the header. The video element is positioned absolutely inside the container and has a width and height of 100% with object-fit: cover to cover the entire container.
