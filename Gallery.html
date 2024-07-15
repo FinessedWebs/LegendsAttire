@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+   <style>
+    *{
+            scroll-behavior:smooth;
+        }
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 20px;
+                background: lavender;
+            }
+    
+            .container img {
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+                margin: 10px;
+                cursor: pointer;
+                transition: transform .2s ease-in-out;
+                border-radius: 9px;
+            }
+    
+            .container img:hover {
+                transform: scale(1.1);
+            }
+    
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding: 20px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+    
+            .modal-content {
+                margin: auto;
+                display: block;
+                max-width: 700px;
+                max-height: 700px;
+                overflow: hidden;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+    
+            @keyframes zoom {
+                from {transform: scale(0)}
+                to {transform: scale(1)}
+            }
+    
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+    
+            .close:hover,
+            .close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            .Backbtn{
+      display: inline-block;
+		padding: 12px 24px;
+		border-radius: 4px;
+		background-color: #007bff;
+		color: #fff;
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: bold;
+		box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+		transition: background-color 0.2s ease-in-out;
+    }
+    .Backbtn:hover {
+		background-color: #0062cc;
+	}
+        </style>
+    </head>
+    <body>
+        <a class="Backbtn" href="Services.html"><u>Back</u></a>
+        <div class="container">
+            <img src="images/30e8cd5965ee0a19999367e91e103af8.jpg" alt="Image 1" onclick="openModal('images/30e8cd5965ee0a19999367e91e103af8.jpg')">
+            <img src="images/7af692f56c6742ac04741c3dfcb99490.jpg" alt="Image 2" onclick="openModal('images/7af692f56c6742ac04741c3dfcb99490.jpg')">
+            <img src="images/fb334acaa0715209f07a555b7e865aaa.jpg" alt="Image 3" onclick="openModal('images/7af692f56c6742ac04741c3dfcb99490.jpg')">
+            <img src="images/Church J.png" alt="Image 4" onclick="openModal('images/Church J.png')">
+            <img src="images/Church purple .png" alt="Image 5" onclick="openModal('images/Church purple .png')">
+            <img src="images/Degree o.png" alt="Image 6" onclick="openModal('images/Degree o.png')">
+            <img src="images/Diploma o (1).png" alt="Image 4" onclick="openModal('images/Diploma o (1).png')">
+            <img src="images/1.png" alt="Image 4" onclick="openModal('images/1.png')">
+            <img src="images/2.png" alt="Image 5" onclick="openModal('images/2.png')">
+            <img src="images/3.png" alt="Image 6" onclick="openModal('images/3.png')">
+            <img src="images/4.png" alt="Image 4" onclick="openModal('images/4.png')">
+            <img src="images/5.png" alt="Image 5" onclick="openModal('images/5.png')">
+            <img src="images/6.png" alt="Image 6" onclick="openModal('images/6.png')">
+            <img src="images/7.png" alt="Image 7" onclick="openModal('images/7.png')">
+            <img src="images/8.png" alt="Image 8" onclick="openModal('images/8.png')">
+            <img src="images/9.png" alt="Image 9" onclick="openModal('images/9.png')">
+            <img src="images/10.png" alt="Image 10" onclick="openModal('images/10.png')">
+            <img src="images/11.png" alt="Image 11" onclick="openModal('images/11.png')">
+            <img src="images/12.png" alt="Image 12" onclick="openModal('images/12.png')">
+            <img src="images/13.png" alt="Image 13" onclick="openModal('images/13.png')">
+            <img src="images/14.png" alt="Image 14" onclick="openModal('images/14.png')">
+            <img src="images/15.png" alt="Image 15" onclick="openModal('images/15.png')">
+            <img src="images/16.png" alt="Image 16" onclick="openModal('images/16.png')">
+            
+            <img src="images/18.png" alt="Image 18" onclick="openModal('images/18.png')">
+            <img src="images/19.png" alt="Image 19" onclick="openModal('images/19.png')">
+            <img src="images/20.png" alt="Image 20" onclick="openModal('images/20.png')">
+            <img src="images/21.png" alt="Image 21" onclick="openModal('images/21.png')">
+            <img src="images/22.png" alt="Image 22" onclick="openModal('images/22.png')">
+            <img src="images/23.png" alt="Image 23" onclick="openModal('images/23.png')">
+            <img src="images/24.png" alt="Image 24" onclick="openModal('images/24.png')">
+            <img src="images/25.png" alt="Image 25" onclick="openModal('images/25.png')">
+            <img src="images/26.png" alt="Image 26" onclick="openModal('images/26.png')">
+            <img src="images/27.png" alt="Image 27" onclick="openModal('images/27.png')">
+
+            <!-- <img src="images/28.jpg" alt="Image 28" onclick="openModal('images/28.jpg')">
+            <img src="images/29.jpg" alt="Image 29" onclick="openModal('images/29.jpg')">
+            <img src="images/30.jpg" alt="Image 30" onclick="openModal('images/30.jpg')">
+            <img src="images/31.jpg" alt="Image 31" onclick="openModal('images/31.jpg')">
+            <img src="images/32.jpg" alt="Image 32" onclick="openModal('images/32.jpg')">
+            <img src="images/33.jpg" alt="Image 33" onclick="openModal('images/33.jpg')"> -->
+
+            
+        </div>
+    
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="img01">
+        </div>
+    
+        <script>
+            function openModal(image) {
+                var modal = document.getElementById("myModal");
+                var img = document.getElementById(image);
+                var modalImg = document.getElementById("img01");
+                modal.style.display = "block";
+                modalImg.src = image;
+            }
+    
+            function closeModal() {
+                var modal = document.getElementById("myModal");
+                modal.style.display = "none";
+            }
+        </script>
+    </body>
+    </html>
+    
