@@ -1,0 +1,361 @@
+html,body
+{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+*{
+    scroll-behavior:smooth;
+}
+
+/* 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+        <!--Logo Navigation bar and Order Button*/
+
+.head{
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+    filter: blur(0px);
+    background-image: url(images/Blur2.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-right-radius: 150px;
+}
+
+.flex-wrap{      
+    border-bottom-left-radius: 50px;
+    display: flex;
+}
+
+.menu-icon{
+    color: transparent;
+}
+
+.logo{
+    padding-left: 100px;
+    padding-top: 10px;
+    color:white;
+}
+
+.navbar{   
+    text-align: center;
+    padding: 25px;
+    width: 100%;
+}
+
+.navbar a{
+    color:rgb(13, 7, 132);
+    font-weight: bold;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover{
+    color:skyblue;
+}
+
+.order-button{
+    color: white;
+    border: none;
+    border-color: white;
+    width: 100px;
+    padding: 10px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin-right:100px ;
+    margin-top: 14px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.order-button a {
+    color: rgb(13, 7, 132);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.order-button:hover {
+    background-color: rgb(13, 7, 132);
+}
+
+.order-button:hover a {
+    color: white;
+}
+
+        /* was grauate*/
+        .graduates-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+.graduates-image img{
+width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.space
+{
+    width: 2%;
+}
+
+.bottom-space
+{
+    height: 50px;
+}
+
+.Article1{
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 25px;
+    font-style:Arial ;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    line-height: 1.5;
+    }
+
+.Welcome{
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+.bottom-order-button{
+    color: white;
+    border: none;
+    border-color: white;
+    width: 150px;
+    padding: 20px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.bottom-order-button a {
+    color: rgb(13, 7, 132);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.bottom-order-button:hover {
+    background-color: rgb(13, 7, 132);
+}
+
+.bottom-order-button:hover a {
+    color: white;
+}
+
+.form{
+    background-color: lightgray;
+    padding-bottom: 25px;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 24rem;
+    
+    
+
+}
+input,
+select,
+textarea{
+    padding: 1.4rem;
+    background: transparent;
+    border: 1px solid black;
+    margin-left: 40px;
+    border-radius: 8px;
+    background-color: white;
+
+}
+textarea{
+    height: 6rem;
+    transition: none; 
+}
+
+form input, select{
+  width: 170px;
+ 
+}
+.submit{ 
+  background-color: skyblue;
+  color: white;
+}
+
+hr{
+  
+    width: 600px;
+    background-color: #154c79;
+    color: #154c79;
+    height: 2px;
+   
+  }
+
+  /* 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+  <!--Contacts Socials and footer-->*/
+  footer
+    {
+        padding: 0.5em 0;
+        height: 130px;
+        justify-content: center;
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .column1, .column2, .column3
+    {
+        color: darkgray;
+    }
+
+    .social-icon
+    {
+        width: 110px;
+        color: darkgray;
+        padding: 5px;
+        text-decoration: none;
+    }
+.social-icon:hover
+    {
+        color: black;
+    }
+
+    @media (max-width: 915px) {
+        *{
+            scroll-behavior:unset;
+        }
+
+        .logo{
+            padding-left: 10px;
+            padding-top: 10px;
+            color:white;
+            
+    }
+        .menu-icon {
+            display: block; /* Show the hamburger menu icon */
+            
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 2;
+            color:  rgb(13, 7, 132);
+       cursor: pointer;
+            font-size: 24px;
+        }
+
+        nav {
+            display: none; /* Hide the navigation */
+        width: 200px;
+            text-align: center;
+            background-color: #34495e;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 1;
+        }
+
+        nav a {
+            display: block;
+            padding: 15px 0;
+            border-bottom: 1px solid #2c3e50;
+        }
+
+        nav a:last-child {
+            border-bottom: none;
+        }
+
+        nav.show {
+            display: block; /* Show the navigation when toggled */
+       }
+
+       .order-button{
+        display: none;
+        text-decoration: none;
+       }
+
+       .order-button a{
+        text-decoration: none;
+        color: white;
+       }
+
+       .graduates-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .graduates-image img{
+    width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+    }
+
+       hr{
+  
+        width: 200px;
+        background-color: #154c79;
+        color: #154c79;
+        height: 1px;
+       
+      }
+
+      .Article1{
+        padding-left: 10%;
+      padding-right: 10%;
+      font-size: 15px;
+      font-style:Arial ;
+      font-family: 'Encode Sans Condensed', sans-serif;
+      line-height: 1.5;
+    }
+    span{
+        color: #2BD6B4;
+}
+
+       footer{
+        padding-right: 80px;
+        justify-content: center;
+    }
+.bottom-order-button{
+    width: 100px;
+    padding: 15px ;
+    font-size: 13px;
+    border-radius: 15px;
+    cursor: pointer;
+    }
+
+    input,
+    select,
+    textarea{
+        padding: 1.2rem;
+        border: 1px solid black;
+        margin-left:15px;
+        border-radius: 8px;
+    
+    }
+    textarea{
+        height: 6rem;
+        width: 100%; 
+    }
+    
+    form input, select{
+      width: 170px;
+     
+    }
+    
+
+    }
