@@ -65,6 +65,53 @@ const scrollActive = () => {
 };
 window.addEventListener("scroll", scrollActive);
 
+/*=============== SLIDE IN ON SCROLL ===============*/
+const addRevealTargets = () => {
+  const revealMap = [
+    [".hero__copy", "reveal reveal--left"],
+    [".hero__visual", "reveal reveal--right"],
+    [".section__eyebrow", "reveal reveal--up"],
+    [".section__title", "reveal reveal--up"],
+    [".card-grid .card", "reveal reveal--up"],
+    [".gallery-grid .gallery-item", "reveal reveal--up"],
+    [".about__img", "reveal reveal--left"],
+    [".about__data", "reveal reveal--right"],
+    [".contact-form", "reveal reveal--up"],
+    [".footer", "reveal reveal--up"],
+  ];
+
+  revealMap.forEach(([selector, classes]) => {
+    document.querySelectorAll(selector).forEach((element) => {
+      classes.split(" ").forEach((className) => element.classList.add(className));
+    });
+  });
+};
+
+const initScrollReveal = () => {
+  const revealItems = document.querySelectorAll(".reveal");
+  if (!revealItems.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.18,
+      rootMargin: "0px 0px -8% 0px",
+    }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+};
+
+addRevealTargets();
+initScrollReveal();
+
 /*=============== PARALLAX ===============*/
 if (typeof Rellax !== "undefined" && document.querySelector(".parallax")) {
   let parallax = new Rellax(".parallax");
