@@ -1,388 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <title>Legends Attire</title>
-    <style type="text/css">
- *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            list-style: none;
-            text-decoration: none;
-            scroll-behavior: smooth;
-            
-        }
-        body{
-            background: linear-gradient(245.59deg, white 0%, Skyblue 28.53%, rgb(38, 38, 121) 75.52%);
-            padding: 0px;
-            margin-top: -18px;
-           
-        }
-        header{
-            position: fixed;
-            right: 0;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 33px 9%;
-            background: transparent;
-        }
-     
-        .logo{
-            font-size: 30px;
-            font-weight: 700;
-            color: white;
-        }
-        .navlist{
-            display: flex;
-        }
-        .navlist a{
-            color: white;
-            margin-left: 60px;
-            font-size: 15px;
-            font-weight: 600;
-            border-bottom: 2px solid transparent;
-            transition: all .55s ease;
-        }
-        .navlist a:hover{
-            border-bottom: 2px solid white;
-        }
-        .menu-icon{
-            color: transparent;
-            font-size: 35px;
-            z-index: 10001;
-            cursor: pointer;
-            display: none;
-        }
-        .hero{
-            height: 100%;
-            width: 100%;
-            min-height: 100vh;
-            background-image: url(images/Graduation\ blur.jpg);
-           background-repeat: no-repeat;
-           background-size: 100%;
-           background-position: center ;
-            position: relative;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            align-items: center;
-            gap: 2rem;
-        }
-        section{
-            padding: 0 19%;
-        }
-        .hero-text h5{
-            font-size: 14px;
-            font-weight: 400;
-            color: white;
-            margin-bottom: 40px;
-        }
-        .hero-text h1{
-            font-family: 'Permanent Marker', cursive;
-            font-size: 90px;
-            line-height: 1;
-            color: white;
-            margin: 0 0 45px;
-        }
-        .hero-text h4{
-            font-size: 18px;
-            font-weight: 600;
-            color: white;
-            margin-bottom: 10px;
-        }
-        .hero-text p{
-            color: white;
-            font-size: 15px;
-            line-height: 1.9;
-            margin-bottom: 40px;
-        }
-        .hero-img img{
-            width: 700px;
-            height: auto;
-        }
-        .hero-text a{
-            display: inline-block;
-            color: white;
-            background: #154c79;
-            border: 1px solid transparent;
-            padding: 12px 30px;
-            line-height: 1.4;
-            font-size: 14px;
-            font-weight: 500;
-            border-radius: 30px;
-            text-transform: uppercase;
-            transition: all .55s ease;
-        }
-        .hero-text a:hover{
-            background: transparent;
-            border: 1px solid white;
-            transform: translateX(8px);
-        }
-        .hero-text a.ctaa{
-            background: transparent;
-            border: 1px solid white;
-            margin-left: px;
-        }
-        .hero-text a.ctaa i{
-            vertical-align: middle;
-            margin-right: 5px;
-        }
-        .icons{
-            position:absolute;
-            top: 50%;
-            padding: 0 9%;
-            transform: translateY(-50%);
-        }
-        .icons i{
-            display: block;
-            margin: 26px 0;
-            font-size: 24px;
-            color: white;
-            transition: all .50s ease;
-        }
-        .icons i:hover{
-            color: #154c79;
-            transform: translateY(-5px);
-        }
-        .scroll-down{
-            position: absolute;
-            bottom: 6%;
-            right: 9%;
-        }
-        .scroll-down i{
-            display: block;
-            padding: 12px;
-            font-size: 25px;
-            color: white;
-            background: #154c79;
-            border-radius: 30px;
-            transition: all .50s ease;
-        }
-        .scroll-down i:hover{
-            transform: translateY(-5px);
-        }
-        video{
-          height: 0px;
-           
-        }
-
-        @media (max-width: 1535px){
-            header{
-                padding: 15px 3%;
-                transition: .2s;
-            }
-            .icons{
-                padding: 0 3%;
-                transition: .2s;
-            }
-            .scroll-down{
-                right: 3%;
-                transition: .2s;
-            }
-        }
-        @media (max-width: 1460px){
-            section{
-                padding: 0 12%;
-                transition:.2s;
-            }
-
-        }
-        @media (max-width: 1340px){
-            .hero-img img{
-                width: 100%;
-                height: auto;
-            }
-            .hero-text h1{
-                font-size: 75px;
-                margin: 0 0 30px;
-            }
-            .hero-text h5{
-                margin-bottom: 25px;
-            }
-        }
-        @media (max-width: 1195px){
-            section{
-                padding: 0 3%;
-                transition: .2s;
-            }
-            .hero-text{
-                padding-top: 115px;
-               
-
-            }
-            .hero-img{
-                text-align: center;
-            }
-            .hero-img img{
-                width: 560px;
-                height: auto;
-            }
-            .hero{
-                height: 100%;
-                gap: 1rem;
-                grid-template-columns: 1fr;
-            }
-            .icons{
-                display: none;
-            }
-            .scroll-down{
-                display: none;
-            }
-        }
-        @media (max-width: 990px){
-            body{
-                margin-left:15px;
-                
-                
-            }
-            video{
-        position: relative;     
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    section{
-            padding: 0px;
-        }
-    .hero{
-        background-image:none;
-    }
-            #menu-icon{
-                display: block;
-            }
-            .menu-icon {
-                display: block; /* Show the hamburger menu icon */
-                
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                z-index: 2;
-                color:  #154c79;
-           cursor: pointer;
-                font-size: 24px;
-            }
-            nav {
-                display: none; /* Hide the navigation */
-            width: 200px;
-                text-align: center;
-                background-color: #34495e;
-                position: absolute;
-                top: 0px;
-                right: 0px;
-                z-index: 1;
-            }
-            nav a {
-                display: block;
-                padding: 15px 0;
-                border-bottom: 1px solid #2c3e50;
-            }
-          
-            nav a:last-child {
-                border-bottom: none;
-            }
-            nav.show {
-                display: block; /* Show the navigation when toggled */
-           }
-            .navlist{
-                position: absolute;
-                top: 100%;
-                right: 0px;
-                width: 300px;
-                height: 70vh;
-                background: #429E9D;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                padding: 50px 20px;
-                transition: all .55s ease;
-            }
-            .navlist a{
-                display: block;
-                margin: 7px 0;
-                margin-left: 0;
-            }
-            .navlist.open{
-                right: 0;
-            }
-        }
-        @media (max-width: 680px){
-            .hero-img img{
-                width: 100%;
-                height: auto;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legends Attire | Graduation Regalia</title>
+  <meta name="description" content="Premium graduation regalia, custom attire services, and fast turnaround from Legends Attire.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="LegendsAttireFinal.css">
 </head>
 <body>
-    <video autoplay muted loop>
-        <source src="video/Sewing machine .mp4" type="video/mp4" title="by Sew Peppermint">
-        your browser does not support the video tag. 
-    </video>
-    <header>
-       
-        <a href="#" class="logo">Legends Attire</a>
+  <header class="header" id="header">
+    <div class="container nav-wrap">
+      <a href="#home" class="logo" id="logo" aria-label="Legends Attire Home">Legends Attire</a>
 
-        <!-- Hamburger menu icon -->
-     <div class="menu-icon" onclick="toggleMenu()">
-        &#9776; <!-- Hamburger icon -->
+      <button class="nav__toggle" id="nav-toggle" aria-label="Open navigation menu" aria-controls="nav-menu">
+        <i class="ri-menu-line" aria-hidden="true"></i>
+      </button>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+        <button class="nav__close" id="nav-close" aria-label="Close navigation menu">
+          <i class="ri-close-line" aria-hidden="true"></i>
+        </button>
+
+        <ul class="nav__list">
+          <li><a class="nav__link active-link" href="#home">Home</a></li>
+          <li><a class="nav__link" href="#services">Services</a></li>
+          <li><a class="nav__link" href="#gallery">Gallery</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <nav id="nav"> <ul class="navlist">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#about-us">About</a></li>
-        <li><a href="Services.html#Services">Service</a></li>
-        <li><a href="index.html#Socials">Socials</a></li>
-        <li><a href="index.html#Contact">Contact</a></li>
-        <li><a href="#">More</a></li>
-    </ul></nav>
+  <main>
+    <section class="hero section" id="home">
+      <video class="hero__video" autoplay muted loop playsinline aria-hidden="true">
+        <source src="video/Sewing machine .mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay" aria-hidden="true"></div>
 
-        
-    </header>
-
-<section class="hero">
-          <div class="hero-text">
-              <h5></h5>
-              <h4>Home Of</h4>
-              <h1>Graduation Regalia</h1>
-              <p>"Look Your Part"</p>
-              <a href="Services.html#Services">Services</a>
-              <a href="#" class="ctaa"><i class="ri-play-fill"></i>Watch Work</a>
-         </div>
-         <div class="hero-img">
-            <img src="">
-
+      <div class="container hero__content">
+        <div class="hero__copy">
+          <p class="hero__eyebrow">Tailored For Milestones</p>
+          <h1 class="home__title">Graduation Regalia That Looks The Part</h1>
+          <p class="hero__lead">
+            Premium gowns, caps, hoods, and custom finishing for schools, institutions, and graduation events.
+          </p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary">Order Now</a>
+            <a href="#contact" class="btn btn--ghost">Get Quote</a>
+          </div>
         </div>
 
-</section>
-<div class="icons">
-    <a href="#"><i class="ri-instagram-line"></i></a>
-    <a href="#"><i class="ri-twitter-line"></i></a>
-    <a href="#"><i class="ri-facebook-circle-line"></i></a>
-</div>
-<div class="scroll-down" >
-<a href="#Services"><i class="ri-arrow-down-s-fill"></i></a>
-</div>
+        <div class="hero__visual parallax">
+          <img class="home__village" src="images/L.Attires Logo.png" alt="Legends Attire brand logo">
+        </div>
+      </div>
+    </section>
 
-<script>
-    // JavaScript function to toggle the navigation menu
-    function toggleMenu() 
-    {
-        var nav = document.getElementById('nav');
-        nav.classList.toggle('show');
-    }
-</script>
+    <section class="section" id="services">
+      <div class="container">
+        <p class="section__eyebrow">Services</p>
+        <h2 class="section__title">Everything You Need For Graduation Day</h2>
+        <div class="card-grid">
+          <article class="card send__card">
+            <h3>Regalia Hire</h3>
+            <p>Affordable rental packages for caps, gowns, and hoods with flexible collection and return options.</p>
+          </article>
+          <article class="card send__card">
+            <h3>Custom Alterations</h3>
+            <p>Size corrections, embroidery, and finishing to ensure every client gets a clean, perfect fit.</p>
+          </article>
+          <article class="card send__card">
+            <h3>Bulk Institutional Orders</h3>
+            <p>Structured, on-time order fulfillment for universities, colleges, and private graduation events.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section section--alt" id="gallery">
+      <div class="container">
+        <p class="section__eyebrow">Gallery</p>
+        <h2 class="section__title">Recent Work</h2>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="images/Graduation _clear.jpg" alt="Graduates in blue regalia">
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/three Students.jpg" alt="Three students in graduation wear">
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/gown.jpg" alt="Close-up of graduation gown details">
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/Graduation.jpg" alt="Graduation ceremony attire styling">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container two-col">
+        <div class="about__img">
+          <img src="images/Photoroom-20240625_122232.png" alt="Team member preparing graduation attire">
+        </div>
+        <div class="about__data">
+          <p class="section__eyebrow">About Legends Attire</p>
+          <h2 class="section__title">Craftsmanship, Consistency, and Confidence</h2>
+          <p>
+            We focus on premium finishing, reliable turnarounds, and professional service so every graduate steps out with confidence.
+          </p>
+          <p>
+            From single orders to full cohort supply, our process is designed for quality control and smooth delivery.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <p class="section__eyebrow">Contact</p>
+        <h2 class="section__title">Start Your Order</h2>
+        <form class="contact-form" action="#" method="post">
+          <div class="form-grid">
+            <div>
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div>
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div>
+            <label for="service">Service Needed</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option value="hire">Regalia Hire</option>
+              <option value="custom">Custom Alterations</option>
+              <option value="bulk">Bulk Institutional Order</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">Get Quote</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <a href="#home" class="scroll-up" id="scroll-up" aria-label="Scroll to top">
+    <i class="ri-arrow-up-line" aria-hidden="true"></i>
+  </a>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>&copy; 2026 Legends Attire. All rights reserved.</p>
+      <div class="footer__socials">
+        <a href="#" aria-label="Instagram"><i class="ri-instagram-line" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Facebook"><i class="ri-facebook-circle-line" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter"><i class="ri-twitter-line" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="LegendsAttireFinal.js"></script>
 </body>
 </html>
